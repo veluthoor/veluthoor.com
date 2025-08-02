@@ -1,0 +1,71 @@
+{
+  "url": "https://veluthoor.com",
+  "server": {
+    "port": 2368,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "127.0.0.1",
+      "user": "ghost",
+      "password": "CHANGE_THIS_PASSWORD",
+      "database": "ghost_production",
+      "charset": "utf8mb4"
+    },
+    "pool": {
+      "min": 2,
+      "max": 10
+    }
+  },
+  "mail": {
+    "transport": "SMTP",
+    "options": {
+      "service": "Gmail",
+      "auth": {
+        "user": "your-email@gmail.com",
+        "pass": "your-app-password"
+      }
+    }
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ],
+    "level": "info"
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/var/www/ghost/content/"
+  },
+  "privacy": {
+    "useUpdateCheck": true
+  },
+  "maintenance": {
+    "enabled": false
+  },
+  "caching": {
+    "frontend": {
+      "enabled": true,
+      "maxAge": 300
+    },
+    "admin": {
+      "enabled": true,
+      "maxAge": 300
+    }
+  },
+  "scheduling": {
+    "enabled": true
+  },
+  "amp": {
+    "enabled": true
+  },
+  "slack": {
+    "enabled": false
+  },
+  "unsplash": {
+    "enabled": true
+  },
+  "version": "5.x"
+} 
